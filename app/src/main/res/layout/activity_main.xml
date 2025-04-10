@@ -14,15 +14,15 @@
         android:gravity="center_horizontal">
 
 <!-- Title -->
-    <ImageView
-        android:id="@+id/title_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/Welcome"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/title_image_desc"
-        android:layout_gravity="center_horizontal"
-        android:adjustViewBounds="true"/>
+        <ImageView
+            android:id="@+id/title_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/title_image_desc"
+            android:src="@drawable/welcome" />
 
 
 <!-- Logo -->
@@ -31,7 +31,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginTop="24dp"
-        android:src="@drawable/Logo"
+        android:src="@drawable/logo"
         android:contentDescription="@string/logo"/>
 
 <!-- Subtext -->

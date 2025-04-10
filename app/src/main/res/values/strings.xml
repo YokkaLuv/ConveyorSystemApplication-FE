@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">ConveyorSystemApplication-Frontend</string>
+    <string name="title_image_desc">Logo Title Image</string>
+    <string name="logo">Logo</string>
+    <string name="please_sign_in_to_proceed">Please sign in to proceed:</string>
+    <string name="hint1">Username/ Email</string>
+    <string name="hint2">Password</string>
 </resources>

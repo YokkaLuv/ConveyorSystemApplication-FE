@@ -1,4 +1,0 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <solid android:color="#D3D3D9"/> <!-- Màu nền cho EditText -->
-    <corners android:radius="10dp"/> <!-- Độ bo tròn góc -->
-</shape>

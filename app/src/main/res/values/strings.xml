@@ -5,4 +5,25 @@
     <string name="please_sign_in_to_proceed">Please sign in to proceed:</string>
     <string name="hint1">Username/ Email</string>
     <string name="hint2">Password</string>
+    <string name="explain_equation">Explain equation?</string>
+    <string-array name="outer_parameter">
+        <item>mm</item>
+        <item>cm</item>
+        <item>m</item>
+    </string-array>
+    <string name="spring_calculator">Spring calculator</string>
+    <string name="select_your_spring_purpose">Select your spring purpose</string>
+    <string name="traction_compression">Traction/Compression</string>
+    <string name="torsion">Torsion</string>
+    <string name="string_design_parameter">String design parameter</string>
+    <string name="spring_index_parameter">Spring index (C)</string>
+    <string name="outer_diameter">Outer diameter (OD)</string>
+    <string name="mean_diameter">Mean diameter (D)</string>
+    <string-array name="mean_parameter">
+        <item>cm</item>
+        <item>mm</item>
+        <item>m</item>
+    </string-array>
+    <string name="wire_diameter">Wire diameter (d)</string>
+    <string name="enter_value">enter value</string>
 </resources>

@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/new_main_color">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="8dp">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/spring_calculator"
+            android:textColor="#050505"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/more" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_rounded"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/transmitting_power_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/select_your_spring_purpose"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:id="@+id/spring_purpose_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- RadioButton cho Traction/Compression -->
+            <RadioButton
+                android:id="@+id/traction_compression"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/traction_compression"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <!-- RadioButton cho Torsion -->
+            <RadioButton
+                android:id="@+id/torsion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="@string/torsion"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <!-- Spring design parameter-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_rounded"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Spring Index (C) -->
+        <TextView
+            android:id="@+id/string_design_parameter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/string_design_parameter"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/spring_index_C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/spring_index_parameter"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- EditText cho Spring Index (C) -->
+        <EditText
+            android:id="@+id/spring_index_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_text_rounded"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <!-- Outer diameter (OD) -->
+        <TextView
+            android:id="@+id/outer_diameter_OD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/outer_diameter"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- EditText cho Spring Index -->
+            <EditText
+                android:id="@+id/outer_diameter_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_text_rounded"
+                android:hint="@string/enter_value"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <!-- Spinner cho đơn vị -->
+            <Spinner
+                android:id="@+id/outer_diameter_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:color="#d3d3d9"
+                android:entries="@array/outer_parameter" />
+        </LinearLayout>
+
+
+        <!-- Driven torque -->
+        <TextView
+            android:id="@+id/mean_diameter_D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/mean_diameter"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- EditText cho Spring Index -->
+            <EditText
+                android:id="@+id/mean_diameter_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_text_rounded"
+                android:hint="@string/enter_value"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <!-- Spinner cho đơn vị -->
+            <Spinner
+                android:id="@+id/mean_diameter_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:entries="@array/outer_parameter" />
+        </LinearLayout>
+
+        <!--wire diameter-->
+        <TextView
+            android:id="@+id/wire_diameter_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/wire_diameter"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- EditText cho Spring Index -->
+            <EditText
+                android:id="@+id/wire_diameter_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_text_rounded"
+                android:hint="@string/enter_value"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <!-- Spinner cho đơn vị -->
+            <Spinner
+                android:id="@+id/wire_diameter_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:entries="@array/outer_parameter" />
+        </LinearLayout>
+
+        <!-- Các Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/spring_design_explain_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/edittext_rounded"
+                android:padding="8dp"
+                android:text="@string/explain_equation"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/spring_design_reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/edittext_rounded"
+                android:padding="8dp"
+                android:text="Reset"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+    <!-- Traction compression spring-->
+        <!-- Spring design parameter-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/edittext_rounded"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Spring Index (C) -->
+            <TextView
+                android:id="@+id/traction_compression_spring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Traction compression string"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/force_applied_to_spring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Force applied to spring (F)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- EditText cho Spring Index (C) -->
+            <EditText
+                android:id="@+id/force_applied_to_string_input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/input_text_rounded"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <!-- Outer diameter (OD) -->
+            <TextView
+                android:id="@+id/driver_pulley_angular_velocity_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Extension/ Compression"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- EditText cho Spring Index -->
+                <EditText
+                    android:id="@+id/extension_compression_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_text_rounded"
+                    android:hint="@string/enter_value"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp" />
+
+                <!-- Spinner cho đơn vị -->
+                <Spinner
+                    android:id="@+id/extension_compression_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:color="#d3d3d9"
+                    android:entries="@array/outer_parameter" />
+            </LinearLayout>
+
+
+            <!-- Driven torque -->
+            <TextView
+                android:id="@+id/spring_const_k"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Spring Const(k)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- EditText cho Spring Index -->
+                <EditText
+                    android:id="@+id/spring_const_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_text_rounded"
+                    android:hint="@string/enter_value"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp" />
+
+                <!-- Spinner cho đơn vị -->
+                <Spinner
+                    android:id="@+id/spring_const_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:entries="@array/outer_parameter" />
+            </LinearLayout>
+
+            <!--wire diameter-->
+            <TextView
+                android:id="@+id/modulus_of_rigidity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Modulus of rigidity (G)"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- EditText cho Spring Index -->
+                <EditText
+                    android:id="@+id/rigidity_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_text_rounded"
+                    android:hint="@string/enter_value"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp" />
+
+                <!-- Spinner cho đơn vị -->
+                <Spinner
+                    android:id="@+id/rigidity_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:entries="@array/outer_parameter" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/choice_spring_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Choice spring end:"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <RadioGroup
+                android:id="@+id/choice_spring_end_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- RadioButton cho Plain end -->
+                <RadioButton
+                    android:id="@+id/plain_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Plain end"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- RadioButton cho ground end -->
+                <RadioButton
+                    android:id="@+id/ground_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Ground end"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- RadioButton cho squared end -->
+                <RadioButton
+                    android:id="@+id/squared_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Squared end"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- RadioButton cho squared and ground end -->
+                <RadioButton
+                    android:id="@+id/squared_ground_end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Squared and ground end"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RadioGroup>
+            <!-- Free length for plain ends-->
+            <TextView
+                android:id="@+id/free_length_for_plain_ends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Free length for plain ends"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!-- EditText cho Spring Index -->
+                <EditText
+                    android:id="@+id/plain_end_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/input_text_rounded"
+                    android:hint="@string/enter_value"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp" />
+
+                <!-- Spinner cho đơn vị -->
+                <Spinner
+                    android:id="@+id/plain_end_unit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:entries="@array/outer_parameter" />
+            </LinearLayout>
+            <!-- Các Button -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/traction_explain_equation_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/edittext_rounded"
+                    android:padding="8dp"
+                    android:text="@string/explain_equation"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/traction_reset_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/edittext_rounded"
+                    android:padding="8dp"
+                    android:text="Reset"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    <!-- Spring design results -->
+    <TextView
+        android:id="@+id/spring_design_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/edittext_rounded"
+        android:text="Spring design results"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/edittext_rounded"
+        android:cornerRadius="8dp"
+        android:elevation="4dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Belt length -->
+        <TextView
+            android:id="@+id/active_coils_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Active coils num (Na)"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/active_coils_num_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/input_text_rounded"
+            android:hint="enter value"
+            android:inputType="numberDecimal"
+            android:padding="10dp" />
+
+        <!-- Belt velocity -->
+        <TextView
+            android:id="@+id/pitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Pitch"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- EditText cho pitch_input -->
+            <EditText
+                android:id="@+id/pitch_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/input_text_rounded"
+                android:hint="@string/enter_value"
+                android:inputType="numberDecimal"
+                android:padding="10dp" />
+
+            <!-- Spinner cho đơn vị -->
+            <Spinner
+                android:id="@+id/pitch_unit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:entries="@array/outer_parameter" />
+        </LinearLayout>
+
+
+        <!-- Belt tension -->
+
+
+    </LinearLayout>
+
+    <!-- Explain equation & Reset buttons -->
+
+
+
+    <!-- Calculate Button -->
+    <Button
+        android:id="@+id/calculate_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_black_rounded"
+        android:padding="12dp"
+        android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <!-- Diagram and 3D model section -->
+    <TextView
+        android:id="@+id/diagram_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="22dp"
+        android:text="Diagram and 3D model below"
+        android:textColor="#585C61"
+        android:textSize="14sp" />
+
+</LinearLayout>
+</ScrollView>

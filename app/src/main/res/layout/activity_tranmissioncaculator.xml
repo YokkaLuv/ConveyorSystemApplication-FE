@@ -1,0 +1,351 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BAE1FF">
+
+
+
+    <!--header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:id = "@+id/header"
+        >
+        <!--nút quay về-->
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back"
+            android:contentDescription="Quay lại"
+            android:background="@null"
+            />
+        <!-- Tranmission Caculation -->
+        <TextView
+            android:id ="@+id/Gear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tranmission Caculation"
+            android:gravity="center"
+            android:textStyle ="bold"
+            android:textSize = "22sp"
+            android:layout_weight = "1"
+            />
+        <!--        nút setting-->
+        <ImageView
+            android:src = "@drawable/more"
+            android:layout_width ="wrap_content"
+            android:layout_height = "wrap_content"
+            />
+    </LinearLayout>
+
+<!--    hết header-->
+
+<!--    box hiển thị thông tin-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height ="wrap_content"
+        android:id ="@+id/contentBox"
+        android:background ="@drawable/edittext_rounded"
+        android:layout_below="@id/header"
+        android:layout_margin="10dp"
+        android:orientation = "vertical"
+
+        >
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height ="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text ="Tire diameter"
+            android:textStyle ="bold"
+            android:textSize ="22sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom ="10dp"
+            android:layout_height="40dp"
+            android:background ="@drawable/grey_container"
+            android:orientation = "horizontal" >
+
+            <TextView
+                android:layout_height ="wrap_content"
+                android:layout_width ="60dp"
+                android:layout_weight="1"
+                android:textStyle ="bold"
+                android:textSize = "25sp"
+                android:layout_marginLeft="5dp"
+                android:textColor ="#449D00"
+
+                />
+            <TextView
+                android:layout_height = "wrap_content"
+                android:layout_width = "wrap_content"
+                android:text = "N/m"
+                android:textStyle = "bold"
+                android:textSize ="25sp" />
+            <ImageView
+                android:layout_height="match_parent"
+                android:layout_width="30dp"
+                android:src="@drawable/stat_minus"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height ="wrap_content"
+            android:text ="Engine RPM"
+            android:textStyle ="bold"
+            android:textSize ="22sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom ="10dp"
+            android:background ="@drawable/grey_container"
+            android:orientation = "horizontal" >
+
+            <TextView
+                android:layout_height ="wrap_content"
+                android:layout_width ="60dp"
+                android:layout_weight="1"
+                android:textStyle ="bold"
+                android:textSize = "25sp"
+                android:layout_marginLeft="5dp"
+                android:textColor ="#449D00"
+
+                />
+            <TextView
+                android:layout_height = "wrap_content"
+                android:layout_width = "wrap_content"
+                android:text = "rpm"
+                android:textStyle = "bold"
+                android:textSize ="25sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height ="wrap_content"
+            android:text ="Tranmission gear ratio"
+            android:textStyle ="bold"
+            android:textSize ="22sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom ="10dp"
+            android:layout_height="40dp"
+            android:background ="@drawable/grey_container"
+            android:orientation = "horizontal" >
+
+            <TextView
+                android:layout_height ="wrap_content"
+                android:layout_width ="60dp"
+                android:layout_weight="1"
+                android:textStyle ="bold"
+                android:textSize = "25sp"
+                android:layout_marginLeft="5dp"
+                android:textColor ="#449D00"
+
+                />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height ="wrap_content"
+            android:text ="Different gear ratio"
+            android:textStyle ="bold"
+            android:textSize ="22sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom ="10dp"
+            android:layout_height="40dp"
+            android:background ="@drawable/grey_container"
+            android:orientation = "horizontal" >
+
+            <TextView
+                android:layout_height ="wrap_content"
+                android:layout_width ="60dp"
+                android:layout_weight="1"
+                android:textStyle ="bold"
+                android:textSize = "25sp"
+                android:layout_marginLeft="5dp"
+                android:textColor ="#449D00"
+
+                />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width = "wrap_content"
+            android:layout_height ="wrap_content"
+            android:text ="Speed"
+            android:textStyle ="bold"
+            android:textSize ="22sp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom ="10dp"
+            android:background ="@drawable/grey_container"
+            android:orientation = "horizontal" >
+
+            <TextView
+                android:layout_height ="wrap_content"
+                android:layout_width ="60dp"
+                android:layout_weight="1"
+                android:textStyle ="bold"
+                android:textSize = "25sp"
+                android:layout_marginLeft="5dp"
+                android:textColor ="#449D00"
+
+                />
+            <TextView
+                android:layout_height = "wrap_content"
+                android:layout_width = "wrap_content"
+                android:text = "km/h"
+                android:textStyle = "bold"
+                android:textSize ="25sp" />
+
+        </LinearLayout>
+
+<!--        2 nút explain và reset-->
+        <LinearLayout
+            android:layout_width = "match_parent"
+            android:layout_height="wrap_content"
+            android:orientation = "horizontal"
+           android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+
+            >
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:background ="@drawable/grey_button"
+
+
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:text="Explain equation?"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+
+                    />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+
+
+                android:background ="@drawable/grey_button">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text = "Reset"
+                    android:textSize = "18sp"
+                    android:textStyle = "bold"
+                     android:padding = "10dp"
+
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation = "vertical"
+        android:layout_below ="@id/contentBox"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background = "@drawable/black_button"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text = "Caculate"
+                android:textSize ="25sp"
+                android:textColor ="#FFFFFF"
+                android:textStyle = "bold"
+                android:paddingLeft = "60dp"
+                android:paddingRight= "60dp"
+                android:paddingTop = "5dp"
+                android:paddingBottom ="5dp"
+
+                />
+
+
+        </LinearLayout>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text = "Diagram and 3D model below"
+             android:textSize ="25sp"
+             android:textStyle = "italic"
+             />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="30dp"
+            android:src="@drawable/stat_minus"
+            />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

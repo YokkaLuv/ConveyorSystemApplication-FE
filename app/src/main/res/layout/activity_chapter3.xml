@@ -1,0 +1,246 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BAE1FF">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/backing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/arrow_back" />
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Chapter III"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/search" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:id = "@+id/caculateBox"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight = "15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_button"
+        android:orientation="vertical">
+
+        <!-- Chain Force -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Motor Speed"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/grey_container"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textColor="#449D00"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="km/h"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Chain Velocity -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Small sprocket teeth"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/grey_container"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textColor="#449D00"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Efficiency -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Chain Ratio"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/grey_container"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:textColor="#449D00"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Load Factor -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height = "80dp"
+            android:layout_marginTop = "20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation ="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="124dp"
+                android:layout_height ="38dp"
+                android:background = "@drawable/grey_bg_button"
+                android:layout_marginLeft="20dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text = "Show Equation"
+                    android:gravity = "center"
+                    android:textStyle = "bold"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="90dp"
+                android:layout_height ="38dp"
+                android:background = "@drawable/grey_bg_button"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight = "20dp"
+
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text = "Import"
+                    android:gravity ="center"
+                    android:textStyle = "bold"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height ="38dp"
+                android:background = "@drawable/grey_bg_button"
+                android:layout_marginLeft="10dp"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity = "center"
+                    android:text = "Reset"
+                    android:textStyle = "bold"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below = "@id/caculateBox"
+        android:gravity ="center"
+
+        >
+
+        <LinearLayout
+            android:layout_height="45dp"
+            android:layout_width ="245dp"
+            android:id = "@+id/caculate"
+            android:background = "@drawable/button_black_rounded"
+            android:gravity = "center"
+
+
+
+            >
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text = "Caculate"
+                android:textStyle = "bold"
+                android:textColor ="#FFFFFF"
+                android:textSize = "20sp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

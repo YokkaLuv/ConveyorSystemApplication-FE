@@ -36,7 +36,7 @@
     <!--    Box hiển thị kết quả-->
 
     <LinearLayout
-        android:id="@+id/caculateBox"
+        android:id="@+id/calculateBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header"
@@ -156,7 +156,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:text="Recaculate"
+                    android:text="Recalculate"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -167,15 +167,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below="@id/caculateBox"
+        android:layout_below="@id/calculateBox"
         android:gravity="center"
 
         >
 
         <LinearLayout
+            android:id="@+id/save_data"
             android:layout_width="265dp"
             android:layout_height="45dp"
-
             android:background="@drawable/button_black_rounded"
             android:gravity="center"
 

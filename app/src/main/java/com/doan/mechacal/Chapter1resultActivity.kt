@@ -16,6 +16,10 @@ class Chapter1resultActivity : AppCompatActivity() {
         backingButton.setOnClickListener {
             finish()
         }
+        val save = findViewById<LinearLayout>(R.id.save_data)
+        save.setOnClickListener{
+            val intent = Intent(this,CreateSessionActivity::class.java)
+            startActivity(intent)
+        }
     }
-
 }

@@ -1,5 +1,4 @@
 package com.doan.mechacal
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -16,7 +15,7 @@ class Chapter7Activity: AppCompatActivity() {
             finish()
         }
 
-        val cal = findViewById<LinearLayout>(R.id.caculate)
+        val cal = findViewById<LinearLayout>(R.id.calculate)
         cal.setOnClickListener{
             val intent = Intent(this,Chapter7resultActivity::class.java)
             startActivity(intent)

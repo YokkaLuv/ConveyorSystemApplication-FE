@@ -34,7 +34,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/caculateBox"
+        android:id="@+id/calculateBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header"
@@ -221,13 +221,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below="@id/caculateBox"
+        android:layout_below="@id/calculateBox"
         android:gravity="center"
 
         >
 
         <LinearLayout
-            android:id="@+id/caculate"
+            android:id="@+id/calculate"
             android:layout_width="245dp"
             android:layout_height="45dp"
             android:background="@drawable/button_black_rounded"
@@ -238,7 +238,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Caculate"
+                android:text="Calculate"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"

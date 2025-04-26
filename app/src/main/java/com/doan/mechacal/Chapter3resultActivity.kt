@@ -14,11 +14,10 @@ class Chapter3resultActivity: AppCompatActivity() {
         back.setOnClickListener{
             finish()
         }
-
-
-
-
-
-
+        val save = findViewById<LinearLayout>(R.id.save_data)
+        save.setOnClickListener{
+            val intent = Intent(this,CreateSessionActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

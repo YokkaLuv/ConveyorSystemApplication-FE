@@ -15,7 +15,7 @@ class Chapter6Activity: AppCompatActivity() {
         back.setOnClickListener{
             finish()
         }
-        val cal = findViewById<LinearLayout>(R.id.caculate)
+        val cal = findViewById<LinearLayout>(R.id.calculate)
         cal.setOnClickListener{
             val intent = Intent(this,Chapter6resultActivity::class.java)
             startActivity(intent)

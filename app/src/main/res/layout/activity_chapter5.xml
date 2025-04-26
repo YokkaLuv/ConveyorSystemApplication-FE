@@ -9,8 +9,8 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/backing"
@@ -19,11 +19,11 @@
             android:src="@drawable/arrow_back" />
 
         <TextView
-            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Chapter V"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
+            android:text="Chapter V"
             android:textSize="25sp"
             android:textStyle="bold" />
 
@@ -34,13 +34,13 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/caculateBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/header"
-        android:id = "@+id/caculateBox"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight = "15dp"
         android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/bg_button"
         android:orientation="vertical">
@@ -59,8 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
@@ -68,8 +68,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="5dp"
+                android:layout_weight="1"
                 android:textColor="#449D00"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -96,8 +96,8 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
@@ -105,8 +105,8 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="5dp"
+                android:layout_weight="1"
                 android:textColor="#449D00"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -133,8 +133,8 @@
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:layout_marginTop="6dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
@@ -142,12 +142,13 @@
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:text=""
                 android:textColor="#449D00"
                 android:textSize="18sp"
-                android:text=""
                 android:textStyle="bold" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -160,91 +161,87 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height = "80dp"
-            android:layout_marginTop = "20dp"
-            android:layout_marginBottom="15dp"
-            android:orientation ="horizontal"
+            android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
-            >
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="124dp"
-                android:layout_height ="38dp"
-                android:background = "@drawable/grey_bg_button"
+                android:layout_height="38dp"
                 android:layout_marginLeft="20dp"
-                >
+                android:background="@drawable/grey_bg_button">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text = "Show Equation"
-                    android:gravity = "center"
-                    android:textStyle = "bold"
-                    />
-
+                    android:gravity="center"
+                    android:text="Show Equation"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="90dp"
-                android:layout_height ="38dp"
-                android:background = "@drawable/grey_bg_button"
+                android:layout_height="38dp"
                 android:layout_marginLeft="20dp"
-                android:layout_marginRight = "20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/grey_bg_button"
 
                 >
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:text = "Import"
-                    android:gravity ="center"
-                    android:textStyle = "bold"
-                    />
-
+                    android:gravity="center"
+                    android:text="Import"
+                    android:textStyle="bold" />
 
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="80dp"
-                android:layout_height ="38dp"
-                android:background = "@drawable/grey_bg_button"
+                android:layout_height="38dp"
                 android:layout_marginLeft="10dp"
-                >
+                android:background="@drawable/grey_bg_button">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity = "center"
-                    android:text = "Reset"
-                    android:textStyle = "bold"
-                    />
-
+                    android:gravity="center"
+                    android:text="Reset"
+                    android:textStyle="bold" />
 
             </LinearLayout>
-
 
         </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_below = "@id/caculateBox"
-        android:gravity ="center"
+        android:layout_below="@id/caculateBox"
+        android:gravity="center"
 
         >
 
         <LinearLayout
+            android:id="@+id/caculate"
+            android:layout_width="245dp"
             android:layout_height="45dp"
-            android:layout_width ="245dp"
-            android:id = "@+id/caculate"
-            android:background = "@drawable/button_black_rounded"
-            android:gravity = "center"
-
-
+            android:background="@drawable/button_black_rounded"
+            android:gravity="center"
 
             >
+
             <TextView
-                android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:text = "Caculate"
-                android:textStyle = "bold"
-                android:textColor ="#FFFFFF"
-                android:textSize = "20sp"
+                android:layout_height="wrap_content"
+                android:text="Caculate"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
 
                 />
         </LinearLayout>

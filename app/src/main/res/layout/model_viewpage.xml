@@ -6,25 +6,24 @@
     android:background="#B3E5FC">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <!-- Header -->
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:paddingBottom="8dp">
 
             <ImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/arrow_back"
-                android:background="?attr/selectableItemBackgroundBorderless" />
-
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/arrow_back" />
 
             <TextView
                 android:layout_width="0dp"
@@ -194,7 +193,6 @@ Role in the Gearbox: As the input gear, Part 1 transmits the initial rotational 
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
-
             <!-- Button -->
             <Button
                 android:layout_width="match_parent"
@@ -204,7 +202,6 @@ Role in the Gearbox: As the input gear, Part 1 transmits the initial rotational 
                 android:text="View suggested products"
                 android:textColor="@android:color/white" />
         </LinearLayout>
-        </LinearLayout>
-
+    </LinearLayout>
 
 </ScrollView>

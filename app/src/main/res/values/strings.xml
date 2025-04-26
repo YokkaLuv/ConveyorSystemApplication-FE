@@ -26,4 +26,5 @@
     </string-array>
     <string name="wire_diameter">Wire diameter (d)</string>
     <string name="enter_value">enter value</string>
+    <string name="dont_have_account_yet"><u>Don\'t have account yet?</u></string>
 </resources>

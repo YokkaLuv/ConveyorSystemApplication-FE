@@ -22,6 +22,9 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".RegisterActivity"
+            android:exported ="true"/>
+
         <activity android:name=".CreateSessionActivity"
                   android:exported ="true"/>
 

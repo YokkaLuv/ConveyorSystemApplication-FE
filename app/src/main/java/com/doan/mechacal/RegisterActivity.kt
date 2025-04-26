@@ -1,5 +1,4 @@
 package com.doan.mechacal
-
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -9,20 +8,20 @@ import com.doan.mechacal.CreateSessionActivity
 import com.doan.mechacal.UserFrontpage
 import com.doan.mechacal.R
 
-class MainActivity : AppCompatActivity() {
+class RegisterActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.register_page)
 
-        val btnSignin: Button = findViewById(R.id.btn_signin)
-        btnSignin.setOnClickListener {
+        val btnSignup: Button = findViewById(R.id.btn_signup)
+        btnSignup.setOnClickListener {
             val intent = Intent(this, UserFrontpage::class.java)
             startActivity(intent)
         }
-        val signup: TextView = findViewById(R.id.signup_link)
-        signup.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
+        val signin: TextView = findViewById(R.id.signin_link)
+        signin.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

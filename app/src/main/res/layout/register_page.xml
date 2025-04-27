@@ -6,9 +6,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal">
+        android:padding="24dp">
 
         <!-- Title -->
         <ImageView
@@ -21,46 +21,45 @@
             android:contentDescription="@string/title_image_desc"
             android:src="@drawable/welcome" />
 
-
         <!-- Logo -->
         <ImageView
             android:id="@+id/logo"
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_marginTop="24dp"
-            android:src="@drawable/logo"
-            android:contentDescription="@string/logo"/>
+            android:contentDescription="@string/logo"
+            android:src="@drawable/logo" />
 
         <!-- Subtext -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
             android:text="@string/please_sign_up_to_create_account"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="100dp"/>
+            android:textStyle="bold" />
 
         <!-- Username -->
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/hint1"
             android:layout_marginTop="25dp"
             android:background="@drawable/edittext_rounded"
-            android:paddingHorizontal="16dp"/>
+            android:hint="@string/hint1"
+            android:paddingHorizontal="16dp" />
 
         <!-- Password -->
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:hint="@string/hint2"
-            android:inputType="textPassword"
             android:layout_marginTop="25dp"
             android:background="@drawable/edittext_rounded"
-            android:paddingHorizontal="16dp"/>
+            android:hint="@string/hint2"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp" />
 
         <!-- Password -->
 
@@ -82,9 +81,9 @@
             android:layout_marginTop="35dp"
             android:background="@drawable/button_black_rounded"
             android:text="Sign up"
-            android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:textColorLink="#000000" />
+            android:textColorLink="#000000"
+            android:textStyle="bold" />
 
         <!-- Sign Up Link -->
         <TextView

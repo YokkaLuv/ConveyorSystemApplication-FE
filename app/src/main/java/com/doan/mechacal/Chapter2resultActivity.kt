@@ -1,7 +1,9 @@
 package com.doan.mechacal
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -14,6 +16,12 @@ class Chapter2resultActivity : AppCompatActivity() {
         val backingButton = findViewById<ImageView>(R.id.backing)
         backingButton.setOnClickListener {
             finish()
+        }
+
+        val save = findViewById<LinearLayout>(R.id.save_data)
+        save.setOnClickListener{
+            val intent = Intent(this,CreateSessionActivity::class.java)
+            startActivity(intent)
         }
 
         // Nhận dữ liệu từ Intent

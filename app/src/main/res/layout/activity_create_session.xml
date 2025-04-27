@@ -2,27 +2,31 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BAE1FF">
+    android:background="@color/white">
 
     <!-- Header -->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_height="96dp"
+        android:background="@color/main_color"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <ImageView
-            android:id="@+id/backinglogo"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
 
+        <ImageView
+            android:id="@+id/backing"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/arrow_back" />
 
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+
             android:layout_weight="1"
             android:src="@drawable/logo" />
 
@@ -30,6 +34,11 @@
             android:layout_width="30dp"
             android:layout_height="34dp"
             android:src="@drawable/search" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent" />
+
     </LinearLayout>
 
     <!-- Scroll View with 7 Chapters -->
@@ -263,15 +272,10 @@
     <LinearLayout
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="2dp"
+        android:background="@color/main_color"
         android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_home" />
 
         <View
             android:layout_width="0dp"
@@ -281,7 +285,25 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/ic_home" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="3" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/ic_user" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
     </LinearLayout>
 
 </RelativeLayout>

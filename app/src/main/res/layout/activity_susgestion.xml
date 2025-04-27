@@ -3,453 +3,410 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background ="@color/main_color"
-    >
+    android:background="@color/main_color"
+    tools:context=".MainActivity">
 
-<!--header-->
+    <!--header-->
     <LinearLayout
+        android:id="@+id/header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="16dp"
-        android:id = "@+id/header"
-        >
-<!--nút quay về-->
+        android:padding="16dp">
+        <!--nút quay về-->
 
         <ImageButton
             android:id="@+id/btnBack"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
-            android:src="@drawable/arrow_back"
-            android:contentDescription="Quay lại"
             android:background="@null"
-        />
-<!--gear...-->
-       <TextView
-           android:id ="@+id/Gear"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="GearBox Caculation"
-           android:gravity="center"
-           android:textStyle ="bold"
-           android:textSize = "22sp"
-          android:layout_weight = "1"
-           />
-<!--        nút setting-->
-        <ImageView
-            android:src = "@drawable/more"
-            android:layout_width ="wrap_content"
-            android:layout_height = "wrap_content"
-            />
-    </LinearLayout>
-
-<!--   phần biểu diễn thông tin -->
-<LinearLayout
-    android:orientation ="vertical"
-    android:layout_height ="match_parent"
-    android:layout_width ="match_parent"
-    android:layout_below="@id/header"
-    android:layout_marginLeft = "15dp"
-    android:layout_marginRight = "15dp"
-    >
-
-<!--    2 cái button chọn tab-->
-    <LinearLayout
-        android:layout_height = "wrap_content"
-        android:layout_width = "match_parent"
-        android:orientation ="horizontal"
-        >
-
-<!--       tab result -->
-        <LinearLayout
-            android:id="@+id/custombutton"
-            android:layout_width="0dp"
-            android:layout_weight="4"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@drawable/tab_change_button"
-            android:clickable="true"
-            android:focusable="true">
-
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Result"
-                android:gravity ="center"
-                android:textColor="#000000"
-                android:textSize ="20sp"
-                android:textStyle ="bold"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
-<!--        khoảng trắng ở giữa-->
-        <View
-            android:layout_width="2dp"
-            android:layout_height="match_parent" />
-
-<!--        tab caculation detail-->
-        <LinearLayout
-            android:id="@+id/customButton"
-            android:layout_width="0dp"
-            android:layout_weight="6"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:background="@drawable/tab_change_button"
-            android:clickable="true"
-            android:focusable="true">
-
-
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Caculation Detail"
-                android:gravity ="center"
-                android:textColor="#000000"
-                android:textSize ="20sp"
-                android:textStyle ="bold"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
-
-
-    </LinearLayout>
-
-<!--    scrollview hiển thị thông tin-->
-<ScrollView
-    android:layout_width = "match_parent"
-    android:layout_height = "0dp"
-    android:layout_weight ="1"
-    android:background ="@drawable/edittext_rounded"
-    android:layout_marginBottom="15dp"
-    >
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-     <!-- chữ output torque-->
+            android:contentDescription="Quay lại"
+            android:src="@drawable/arrow_back" />
+        <!--gear...-->
         <TextView
-            android:layout_height = "wrap_content"
-            android:layout_width ="match_parent"
-            android:text ="Output Torque"
-            android:textSize ="25sp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
+            android:id="@+id/Gear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="GearBox Caculation"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+        <!--        nút setting-->
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/more" />
+    </LinearLayout>
 
-            android:textStyle = "bold"
-            />
+    <!--   phần biểu diễn thông tin -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
 
+        <!--    2 cái button chọn tab-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_height="40dp"
-            android:background ="@drawable/grey_container"
-            android:orientation = "horizontal" >
-
-        <TextView
-                  android:layout_height ="wrap_content"
-                  android:layout_width ="60dp"
-                  android:text ="1900"
-                  android:layout_weight="1"
-                  android:textStyle ="bold"
-                  android:textSize = "25sp"
-                  android:layout_marginLeft="5dp"
-                  android:textColor ="#449D00"
-
-            />
-
-            <TextView
-                android:layout_height = "wrap_content"
-                android:layout_width = "wrap_content"
-                android:text = "N/m"
-                android:textStyle = "bold"
-                android:textSize ="25sp" />
-            <ImageView
-                android:layout_height="match_parent"
-                android:layout_width="30dp"
-                android:src="@drawable/stat_minus"
-                />
-        </LinearLayout>
-
-<!--nút view 3d model-->
-        <LinearLayout
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:orientation ="vertical"
-            android:layout_marginTop="12dp"
-            android:background ="@drawable/green_button"
-            android:layout_gravity="center_horizontal"
-            android:padding ="10dp"
-            >
+            android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text ="View 3D Model"
-                android:textSize = "18sp"
-                android:textColor ="#FFFFFF"
-
-
-                />
-            <ImageView
-                android:layout_width ="20dp"
-                android:layout_height ="20dp"
-                android:src = "@drawable/arrow_down"
-                android:layout_gravity="center_horizontal"
-
-                />
-        </LinearLayout>
-
-<!--    nút suggetion-->
-
-        <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:orientation ="vertical"
-            android:layout_marginTop="12dp"
-            android:background ="@drawable/grey_button"
-            android:layout_gravity="center_horizontal"
-            android:padding ="10dp"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text ="View suggested products"
-                android:textSize = "18sp"
-                android:textStyle ="bold"
-                android:textColor ="#000000"
-
-
-                />
-            <ImageView
-                android:layout_width ="20dp"
-                android:layout_height ="20dp"
-                android:src = "@drawable/black_arrow_up"
-                android:layout_gravity="center_horizontal"
-
-                />
-        </LinearLayout>
-
-<!--       dòng chữ dưới. 2 cái nút -->
-        <TextView
-            android:layout_height = "wrap_content"
-            android:layout_width = "wrap_content"
-            android:layout_marginTop="10dp"
-            android:text ="Base on your input requirments and output results, here are some gearbox suggestion:"
-            android:textSize = "22sp"
-            android:textStyle ="bold"
-
-            />
-<!--    first choice    -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation ="vertical"
-            >
-                <!--title-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text ="1.AB- High Prec Planetary Gearboxes"
-                android:layout_marginTop="10dp"
-                android:textStyle = "bold"
-                android:textSize = "25sp"
-                />
-
-            <ImageView
-                android:layout_height="164dp"
-                android:layout_width ="215dp"
-                android:src = "@drawable/susgested_motor_1"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-
-                />
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text ="Powerful, precise, robust, quiet and fast, suitable for all servo applications.The Apex AB series is the Next generation in planetary technology. Highest Precision, Highest Torque and Quiet Operation are provided by 100% optimized Helical Gearing. Straddle Mounted High Precision Bearings Allow for High Radial and Axial Loads."
-                android:textStyle ="bold"
-                />
-
-        <!--  hai cái nút  -->
+            <!--       tab result -->
             <LinearLayout
-                android:layout_width = "wrap_content"
-                android:layout_height = "wrap_content"
-                android:orientation ="horizontal"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                >
-                <LinearLayout
+                android:id="@+id/custombutton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:background="@drawable/tab_change_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:orientation ="vertical"
-                    android:layout_marginTop="12dp"
-                    android:background ="@drawable/green_button"
-                    android:layout_gravity="center_horizontal"
-                    android:padding ="10dp"
-                    >
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="Result"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!--        khoảng trắng ở giữa-->
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text ="Detail specfication"
-                        android:padding ="4dp"
-                        android:textSize = "12sp"
-                        android:textColor ="#FFFFFF"
+            <!--        tab caculation detail-->
+            <LinearLayout
+                android:id="@+id/customButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:background="@drawable/tab_change_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:padding="12dp">
 
-
-                        />
-
-                </LinearLayout>
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="match_parent" />
-                <LinearLayout
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:orientation ="vertical"
-                    android:layout_marginTop="12dp"
-                    android:background ="@drawable/green_button"
-                    android:layout_gravity="center_horizontal"
-                    android:padding ="10dp"
-                    >
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text ="Contact Manufacturer"
-                        android:textSize = "12sp"
-                        android:padding = "4dp"
-                        android:textColor ="#FFFFFF"
-
-
-                        />
-
-                </LinearLayout>
+                    android:layout_marginStart="8dp"
+                    android:gravity="center"
+                    android:text="Caculation Detail"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
-
-
-
-
-
-
         </LinearLayout>
 
+        <!--    scrollview hiển thị thông tin-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="15dp"
+            android:layout_weight="1"
+            android:background="@drawable/edittext_rounded">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation ="vertical"
-            >
-            <!--title-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text ="2.AB- High Prec Planetary Gearboxes"
-                android:layout_marginTop="10dp"
-                android:textStyle = "bold"
-                android:textSize = "25sp"
-                />
-
-            <ImageView
-                android:layout_height="164dp"
-                android:layout_width ="215dp"
-                android:src = "@drawable/susgested_motor_1"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-
-                />
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text ="Powerful, precise, robust, quiet and fast, suitable for all servo applications.The Apex AB series is the Next generation in planetary technology. Highest Precision, Highest Torque and Quiet Operation are provided by 100% optimized Helical Gearing. Straddle Mounted High Precision Bearings Allow for High Radial and Axial Loads."
-                android:textStyle ="bold"
-                />
-
-            <!--  hai cái nút  -->
             <LinearLayout
-                android:layout_width = "wrap_content"
-                android:layout_height = "wrap_content"
-                android:orientation ="horizontal"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="10dp"
-                >
-                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- chữ output torque-->
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:orientation ="vertical"
-                    android:layout_marginTop="12dp"
-                    android:background ="@drawable/green_button"
-                    android:layout_gravity="center_horizontal"
-                    android:padding ="10dp"
-                    >
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:text="Output Torque"
+                    android:textSize="25sp"
+
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/grey_container"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:text="1900"
+                        android:textColor="#449D00"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+
+                        />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text ="Detail specfication"
-                        android:padding ="4dp"
-                        android:textSize = "12sp"
-                        android:textColor ="#FFFFFF"
+                        android:text="N/m"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
 
-
-                        />
-
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/stat_minus" />
                 </LinearLayout>
-                <View
-                    android:layout_width="8dp"
-                    android:layout_height="match_parent" />
+
+                <!--nút view 3d model-->
                 <LinearLayout
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:orientation ="vertical"
-                    android:layout_marginTop="12dp"
-                    android:background ="@drawable/green_button"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:padding ="10dp"
-                    >
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/green_button"
+                    android:orientation="vertical"
+                    android:padding="10dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text ="Contact Manufacturer"
-                        android:textSize = "12sp"
-                        android:padding = "4dp"
-                        android:textColor ="#FFFFFF"
-
+                        android:text="View 3D Model"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
 
                         />
 
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/arrow_down"
+
+                        />
                 </LinearLayout>
+
+                <!--    nút suggetion-->
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/grey_button"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View suggested products"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+
+                        />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/black_arrow_up"
+
+                        />
+                </LinearLayout>
+
+                <!--       dòng chữ dưới. 2 cái nút -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Base on your input requirments and output results, here are some gearbox suggestion:"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+
+                    />
+                <!--    first choice    -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--title-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="1.AB- High Prec Planetary Gearboxes"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="215dp"
+                        android:layout_height="164dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/susgested_motor_1"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Powerful, precise, robust, quiet and fast, suitable for all servo applications.The Apex AB series is the Next generation in planetary technology. Highest Precision, Highest Torque and Quiet Operation are provided by 100% optimized Helical Gearing. Straddle Mounted High Precision Bearings Allow for High Radial and Axial Loads."
+                        android:textStyle="bold" />
+
+                    <!--  hai cái nút  -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/green_button"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="Detail specfication"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/green_button"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="Contact Manufacturer"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <!--title-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="2.AB- High Prec Planetary Gearboxes"
+                        android:textSize="25sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="215dp"
+                        android:layout_height="164dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/susgested_motor_1"
+
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Powerful, precise, robust, quiet and fast, suitable for all servo applications.The Apex AB series is the Next generation in planetary technology. Highest Precision, Highest Torque and Quiet Operation are provided by 100% optimized Helical Gearing. Straddle Mounted High Precision Bearings Allow for High Radial and Axial Loads."
+                        android:textStyle="bold" />
+
+                    <!--  hai cái nút  -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/green_button"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="Detail specfication"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+
+                                />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="8dp"
+                            android:layout_height="match_parent" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/green_button"
+                            android:orientation="vertical"
+                            android:padding="10dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="4dp"
+                                android:text="Contact Manufacturer"
+                                android:textColor="#FFFFFF"
+                                android:textSize="12sp"
+
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--        tới đây là kết thúc của cái box ngoài-->
+
             </LinearLayout>
-
-
-
-
-
-
-
-        </LinearLayout>
-
-
-
-
-
-        <!--        tới đây là kết thúc của cái box ngoài-->
-
+        </ScrollView>
 
     </LinearLayout>
-</ScrollView>
-
-
-
-</LinearLayout>
 </RelativeLayout>

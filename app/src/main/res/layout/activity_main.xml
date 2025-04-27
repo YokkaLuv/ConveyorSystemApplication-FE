@@ -25,7 +25,6 @@
             android:contentDescription="@string/title_image_desc"
             android:src="@drawable/welcome" />
 
-
         <!-- Logo -->
         <ImageView
             android:id="@+id/logo"

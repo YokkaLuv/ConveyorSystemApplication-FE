@@ -40,9 +40,9 @@ class Chapter2resultActivity : AppCompatActivity() {
         val resultZ2 = findViewById<TextView>(R.id.resultZ2)
         val resultUx = findViewById<TextView>(R.id.resultUx)
 
-        resultForce.text = "$force N"
-        resultNx.text = "$nx vòng/phút"
-        resultD1.text = "$d1 mm"
+        resultForce.text = "$force"
+        resultNx.text = "$nx"
+        resultD1.text = "$d1"
         resultZ1.text = "$z1 răng"
         resultZ2.text = "$z2 răng"
         resultUx.text = "$ux"

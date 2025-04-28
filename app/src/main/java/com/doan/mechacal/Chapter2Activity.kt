@@ -54,8 +54,6 @@ class Chapter2Activity : AppCompatActivity() {
                 putExtra("F", F)
                 putExtra("n_x", n_x)
                 putExtra("d1", d1)
-                putExtra("z1", z1)
-                putExtra("z2", z2)
                 putExtra("u_x", u_x)
             }
 

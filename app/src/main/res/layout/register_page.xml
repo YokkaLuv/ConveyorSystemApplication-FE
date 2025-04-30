@@ -74,16 +74,27 @@
             android:inputType="textPassword"
             android:paddingHorizontal="16dp" />
 
-        <Button
-            android:id="@+id/btn_signup"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
+        <LinearLayout
+            android:id="@+id/save_data"
+            android:layout_width="265dp"
+            android:layout_height="45dp"
             android:layout_marginTop="35dp"
             android:background="@drawable/button_black_rounded"
-            android:text="Sign up"
-            android:textColor="@android:color/white"
-            android:textColorLink="#000000"
-            android:textStyle="bold" />
+            android:gravity="center"
+
+            >
+
+            <TextView
+                android:id="@+id/sign_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign Up"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
 
         <!-- Sign Up Link -->
         <TextView

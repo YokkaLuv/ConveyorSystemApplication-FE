@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnSignin: Button = findViewById(R.id.btn_signin)
+        val btnSignin: TextView = findViewById(R.id.sign_in)
         btnSignin.setOnClickListener {
             val intent = Intent(this, UserFrontpage::class.java)
             startActivity(intent)

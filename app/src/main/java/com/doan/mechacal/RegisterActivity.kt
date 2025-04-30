@@ -15,7 +15,7 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.register_page)
 
-        val btnSignup: Button = findViewById(R.id.btn_signup)
+        val btnSignup: TextView = findViewById(R.id.sign_up)
         btnSignup.setOnClickListener {
             val intent = Intent(this, UserFrontpage::class.java)
             startActivity(intent)

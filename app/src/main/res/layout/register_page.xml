@@ -75,7 +75,7 @@
             android:paddingHorizontal="16dp" />
 
         <LinearLayout
-            android:id="@+id/save_data"
+            android:id="@+id/sign_up"
             android:layout_width="265dp"
             android:layout_height="45dp"
             android:layout_marginTop="35dp"
@@ -85,7 +85,7 @@
             >
 
             <TextView
-                android:id="@+id/sign_up"
+                android:id="@+id/sign_up_word"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Sign Up"

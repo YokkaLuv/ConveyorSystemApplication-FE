@@ -6,17 +6,23 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 
-class UserFrontpage : AppCompatActivity() {
+class UserProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.user_frontpage)
+        setContentView(R.layout.user_profile)
 
-        val createButton = findViewById<LinearLayout>(R.id.createBtn)
+        val logOut = findViewById<LinearLayout>(R.id.log_out)
 
-        createButton.setOnClickListener {
-            val intent = Intent(this, CreateSessionActivity::class.java)
+        logOut.setOnClickListener{
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        val back = findViewById<ImageView>(R.id.backing)
+        back.setOnClickListener {
+            finish()
+        }
+
         //  navbar
         val home: ImageView = findViewById(R.id.create_session_frame)
         home.setOnClickListener {

@@ -3,6 +3,7 @@ package com.doan.mechacal
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.doan.mechacal.CreateSessionActivity
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnSignin: TextView = findViewById(R.id.sign_in)
+        val btnSignin: LinearLayout = findViewById(R.id.sign_in)
         btnSignin.setOnClickListener {
             val intent = Intent(this, UserFrontpage::class.java)
             startActivity(intent)

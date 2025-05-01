@@ -6,9 +6,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.ConveyorSystemApplicationFrontend"
         tools:targetApi="31">
@@ -22,59 +22,76 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".RegisterActivity"
-            android:exported ="true"/>
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
 
-        <activity android:name=".CreateSessionActivity"
-                  android:exported ="true"/>
+        <activity
+            android:name=".CreateSessionActivity"
+            android:exported="true" />
 
-        <activity android:name=".UserFrontpage"
-                  android:exported ="true"/>
+        <activity
+            android:name=".UserFrontpage"
+            android:exported="true" />
 
-        <activity android:name =".Chapter1Activity"
-                  android:exported = "true"/>
+        <activity
+            android:name=".Chapter1Activity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter1resultActivity"
-                  android:exported = "true" />
+        <activity
+            android:name=".Chapter1resultActivity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter2Activity"
-                  android:exported ="true" />
-        <activity android:name=".Chapter2resultActivity"
-                  android:exported = "true" />
+        <activity
+            android:name=".Chapter2Activity"
+            android:exported="true" />
+        <activity
+            android:name=".Chapter2resultActivity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter3Activity"
-                  android:exported = "true"/>
+        <activity
+            android:name=".Chapter3Activity"
+            android:exported="true" />
 
+        <activity
+            android:name=".Chapter3resultActivity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter3resultActivity"
-                  android:exported="true"/>
+        <activity
+            android:name=".Chapter4Activity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter4Activity"
-                  android:exported = "true"/>
+        <activity
+            android:name=".Chapter4resultActivity"
+            android:exported="true" />
 
+        <activity
+            android:name=".Chapter5Activity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter4resultActivity"
-                  android:exported="true"/>
+        <activity
+            android:name=".Chapter5resultActivity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter5Activity"
-                  android:exported = "true"/>
+        <activity
+            android:name=".Chapter6Activity"
+            android:exported="true" />
 
+        <activity
+            android:name=".Chapter6resultActivity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter5resultActivity"
-                  android:exported="true"/>
+        <activity
+            android:name=".Chapter7Activity"
+            android:exported="true" />
 
-        <activity android:name=".Chapter6Activity"
-            android:exported = "true"/>
+        <activity
+            android:name=".Chapter7resultActivity"
+            android:exported="true" />
 
-
-        <activity android:name=".Chapter6resultActivity"
-            android:exported="true"/>
-
-        <activity android:name=".Chapter7Activity"
-                  android:exported = "true"/>
-        <activity android:name=".Chapter7resultActivity"
-                  android:exported="true"/>
-
+        <activity
+            android:name=".UserProfileActivity"
+            android:exported="true" />
 
     </application>
 

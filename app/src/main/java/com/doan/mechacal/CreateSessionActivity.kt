@@ -10,10 +10,25 @@ class CreateSessionActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_session)
+
         val backingButton = findViewById<ImageView>(R.id.backing)
         backingButton.setOnClickListener {
             finish()
         }
+
+        //  navbar
+        val home: ImageView = findViewById(R.id.create_session_frame)
+        home.setOnClickListener {
+            val intent = Intent(this, UserFrontpage::class.java)
+            startActivity(intent)
+        }
+
+        val profile: ImageView = findViewById(R.id.user_profile_frame)
+        profile.setOnClickListener {
+            val intent = Intent(this, UserProfileActivity::class.java)
+            startActivity(intent)
+        }
+        // navbar
 
         val chap1 = findViewById<LinearLayout>(R.id.chapter1)
         chap1.setOnClickListener {

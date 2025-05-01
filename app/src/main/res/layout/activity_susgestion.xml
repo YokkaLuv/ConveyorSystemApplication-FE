@@ -16,7 +16,7 @@
         <!--nút quay về-->
 
         <ImageButton
-            android:id="@+id/btnBack"
+            android:id="@id/backing"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:background="@null"

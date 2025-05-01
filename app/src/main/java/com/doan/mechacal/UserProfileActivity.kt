@@ -23,6 +23,12 @@ class UserProfileActivity : AppCompatActivity() {
             finish()
         }
 
+        val changePass : LinearLayout = findViewById(R.id.change_pass)
+        changePass.setOnClickListener {
+            val intent = Intent(this, ChangePasswordActivity::class.java)
+            startActivity(intent)
+        }
+
         //  navbar
         val home: ImageView = findViewById(R.id.create_session_frame)
         home.setOnClickListener {

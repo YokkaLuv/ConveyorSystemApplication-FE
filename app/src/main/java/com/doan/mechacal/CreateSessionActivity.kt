@@ -71,6 +71,11 @@ class CreateSessionActivity : AppCompatActivity() {
             val intent = Intent(this, Chapter7Activity::class.java)
             startActivity(intent)
         }
-    }
 
+        val fincal = findViewById<LinearLayout>(R.id.final_cal)
+        fincal.setOnClickListener {
+            val intent = Intent(this, FinalOutputActivity::class.java)
+            startActivity(intent)
+        }
+    }
 }

@@ -97,6 +97,10 @@
             android:name=".ChangePasswordActivity"
             android:exported="true" />
 
+        <activity
+            android:name=".FinalOutputActivity"
+            android:exported="true" />
+
     </application>
 
 </manifest>

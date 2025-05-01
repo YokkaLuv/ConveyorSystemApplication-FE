@@ -186,7 +186,7 @@
         <!-- const button set-->
         <include
             android:id="@+id/chap7_button_set"
-            layout="@layout/const_button_set"
+            layout="@layout/component_button_set"
             android:layout_marginVertical="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

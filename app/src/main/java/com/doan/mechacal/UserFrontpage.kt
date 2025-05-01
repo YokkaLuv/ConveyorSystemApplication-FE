@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class UserFrontpage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.user_frontpage)
+        setContentView(R.layout.activity_user_frontpage)
 
         val createButton = findViewById<LinearLayout>(R.id.createBtn)
 

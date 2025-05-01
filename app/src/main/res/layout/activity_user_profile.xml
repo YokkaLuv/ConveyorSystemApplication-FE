@@ -103,19 +103,12 @@
                     android:contentDescription="Gender"
                     android:src="@android:drawable/ic_menu_gallery" />
 
-                <TextView
+                <include
                     android:id="@+id/role"
+                    layout="@layout/component_student_badge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/student_badge_bg"
-                    android:paddingStart="15dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="15dp"
-                    android:paddingBottom="4dp"
-                    android:text="Student"
-                    android:textColor="#666666"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

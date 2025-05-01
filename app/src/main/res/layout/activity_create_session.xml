@@ -265,6 +265,36 @@
                     android:src="@drawable/arrow_forward" />
             </LinearLayout>
 
+            <!-- Chapter VIII -->
+            <LinearLayout
+                android:id="@+id/final_cal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/bg_button"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+                <View
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gearbox Calculation"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/arrow_forward" />
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

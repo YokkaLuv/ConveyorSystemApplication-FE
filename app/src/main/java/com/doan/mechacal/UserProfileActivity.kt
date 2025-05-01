@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class UserProfileActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.user_profile)
+        setContentView(R.layout.activity_user_profile)
 
         val logOut = findViewById<LinearLayout>(R.id.log_out)
 

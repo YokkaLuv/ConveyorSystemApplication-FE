@@ -23,6 +23,12 @@ class UserProfileActivity : AppCompatActivity() {
             finish()
         }
 
+        val changeProfile : LinearLayout = findViewById(R.id.change_profile)
+        changeProfile.setOnClickListener {
+            val intent = Intent(this,EditProfileActivity::class.java)
+            startActivity(intent)
+        }
+
         val changePass : LinearLayout = findViewById(R.id.change_pass)
         changePass.setOnClickListener {
             val intent = Intent(this, ChangePasswordActivity::class.java)

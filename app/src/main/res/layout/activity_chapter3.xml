@@ -44,118 +44,121 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="8dp"
         android:background="@drawable/bg_button"
         android:orientation="vertical">
 
-        <!-- Chain Force -->
+        <!-- Công suất trên trục công tác -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
-            android:text="Motor Speed"
+            android:text="Số vòng quay động cơ (vòng/phút)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="0dp"
+            <EditText
+                android:id="@+id/input_N"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:fontFamily="sans-serif"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
+                android:lineSpacingExtra="0sp"
+                android:selectAllOnFocus="false"
+                android:singleLine="false"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="km/h"
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Chain Velocity -->
+        <!-- Số vòng quay đĩa xích -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Small sprocket teeth"
+            android:text="Số vòng quay đĩa xích (vòng/phút)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/input_Nx"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Efficiency -->
+        <!-- Tý số truyền xích -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
-            android:text="Chain Ratio"
+            android:text="Tỷ số tuyền xích (2-4)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/input_Ux"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="number"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Load Factor -->
+
+
+
+
         <!-- const button set-->
         <include
-            android:id="@+id/chap3_button_set"
+            android:id="@+id/chap2_button_set"
             layout="@layout/component_button_set"
             android:layout_marginVertical="20dp"
             android:layout_width="match_parent"
@@ -163,6 +166,7 @@
         <!-- const button set-->
     </LinearLayout>
 
+    <!-- Buttons (kept unchanged as per your request) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -192,4 +196,3 @@
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
-

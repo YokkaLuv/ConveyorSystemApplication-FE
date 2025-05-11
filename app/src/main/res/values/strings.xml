@@ -30,4 +30,5 @@
     <string name="dont_have_account_yet"><u>Don\'t have account yet?</u></string>
     <string name="please_sign_up_to_create_account">Please sign up to create account:</string>
     <string name="already_have_account"><u>Already have account?</u></string>
+    <string name="hint0">Name</string>
 </resources>

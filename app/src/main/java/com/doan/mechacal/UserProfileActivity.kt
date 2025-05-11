@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class UserProfileActivity : AppCompatActivity() {
@@ -22,6 +23,10 @@ class UserProfileActivity : AppCompatActivity() {
         back.setOnClickListener {
             finish()
         }
+
+        val namek = intent.getStringExtra("name")
+        val account_name = findViewById<TextView>(R.id.account_name)
+        account_name.text = "$namek"
 
         val changeProfile : LinearLayout = findViewById(R.id.change_profile)
         changeProfile.setOnClickListener {

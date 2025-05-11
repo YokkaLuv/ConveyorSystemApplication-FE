@@ -58,8 +58,11 @@ class RegisterActivity : AppCompatActivity() {
                     registerUser(name, email, password)
                 }
             }
-        }
 
+        }
+        val intent = Intent(this, UserProfileActivity::class.java).apply {
+            putExtra("name", nameEditText.text)
+        }
         signInLink.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()

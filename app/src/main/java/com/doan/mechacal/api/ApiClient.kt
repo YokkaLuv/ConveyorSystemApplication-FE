@@ -46,4 +46,5 @@ object ApiClient {
             .client(client)
             .build()
     }
+    fun service(context: Context): ApiService = getClient(context).create(ApiService::class.java)
 }

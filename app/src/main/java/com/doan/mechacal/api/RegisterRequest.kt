@@ -1,8 +1,8 @@
 package com.doan.mechacal.api
 
-data class RegisterRequest(
-    val name: String,
-    val email: String,
-    val username: String,
-    val password: String
+class RegisterRequest(
+    var name: String,
+    private val email: String,
+    private val username: String,
+    private val password: String
 )

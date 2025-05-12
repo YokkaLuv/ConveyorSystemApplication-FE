@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Nominal Coupling Torque"
+            android:text="Momen xoắn định dạng (Nm)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -70,10 +70,12 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id = "@+id/result_Tn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:text = ""
                 android:textColor="#449D00"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -92,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Minimal Shaft Diameter"
+            android:text="Đường kính trục (mm)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -107,10 +109,12 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id = "@+id/result_dmin"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:text =""
                 android:textColor="#449D00"
                 android:textSize="18sp"
                 android:textStyle="bold" />

@@ -48,41 +48,37 @@
         android:background="@drawable/bg_button"
         android:orientation="vertical">
 
-        <!-- Chain Force -->
+        <!-- Momen xoắn động cơ -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Torque"
+            android:text="Momen xoắn động cơ (T)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
-
-            <TextView
+            <EditText
+                android:id="@+id/TValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nm"
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
         <!-- Chain Velocity -->
@@ -91,75 +87,132 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Motor Speed"
+            android:text="Tốc độ quay động cơ (n)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/nValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="km/h"
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Efficiency -->
+        <!-- Ứng xuất xoắn cho phép -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Motor Shaft Diameter"
+            android:text="Ứng suất xoắn cho phép"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/tValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:text=""
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
+        </LinearLayout>
+        <!-- Ứng xuất xoắn cho phép -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Hệ số an toàn (ks)"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/grey_container"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id = "@+id/ksValue"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="mm"
-                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
+                android:textColor="#449D00"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
+        <!-- Ứng xuất xoắn cho phép -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Đường kính trục động cơ (giả định)"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/grey_container"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id = "@+id/dValue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
+                android:textColor="#449D00"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
         <!-- Load Factor -->
         <!-- const button set-->
         <include

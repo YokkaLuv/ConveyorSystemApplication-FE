@@ -1,5 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
@@ -14,26 +14,25 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@id/backing"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
+            android:id="@+id/backing"
             android:layout_width="50dp"
             android:layout_height="match_parent"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
             android:src="@drawable/arrow_back" />
 
         <TextView
             android:id="@+id/header_title"
-            android:paddingStart="0dp"
-            android:paddingEnd="40dp"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:paddingStart="0dp"
+            android:paddingEnd="40dp"
             android:text="Chapter VII"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -48,167 +47,191 @@
         android:background="@drawable/bg_button"
         android:orientation="vertical">
 
-        <!-- Chain Force -->
+        <!-- Mômen xoắn -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Working Shaft Power"
+            android:text="Mômen xoắn (T)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/input_t"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="5000-7000"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="kW"
-                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:text="N.m"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Chain Velocity -->
+        <!-- Đường kính trục -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Slow Torque"
+            android:text="Đường kính trục (d)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/input_d"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="60-80"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nm"
-                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                android:text="mm"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Efficiency -->
+        <!-- Chiều dài then -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Contact Stress"
+            android:text="Chiều dài then (l_key)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/input_l_key"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="50-100"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="mm"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Load Factor -->
+        <!-- Ứng suất cắt cho phép -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Rated Load"
+            android:text="Ứng suất cắt cho phép ([σ_key])"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/input_sigma_key"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="50-80"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="MPa"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Load Factor -->
-        <!-- const button set-->
+        <!-- Button set -->
         <include
             android:id="@+id/chap7_button_set"
             layout="@layout/component_button_set"
-            android:layout_marginVertical="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <!-- const button set-->
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_below="@id/calculateBox"
-        android:gravity="center"
-
-        >
+        android:gravity="center">
 
         <LinearLayout
             android:id="@+id/calculate"
             android:layout_width="245dp"
             android:layout_height="45dp"
             android:background="@drawable/button_black_rounded"
-            android:gravity="center"
-
-            >
+            android:gravity="center">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -216,16 +239,7 @@
                 android:text="Calculate"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
-                android:textStyle="bold"
-
-                />
+                android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="20dp" />
 </RelativeLayout>

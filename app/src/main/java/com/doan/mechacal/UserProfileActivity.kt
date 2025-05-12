@@ -1,5 +1,6 @@
 package com.doan.mechacal
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
@@ -13,8 +14,7 @@ class UserProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_user_profile)
 
         val logOut = findViewById<LinearLayout>(R.id.log_out)
-
-        logOut.setOnClickListener{
+        logOut.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
@@ -24,30 +24,32 @@ class UserProfileActivity : AppCompatActivity() {
             finish()
         }
 
-        val namek = intent.getStringExtra("name")
+        // Retrieve name from SharedPreferences
+        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+        val namek = sharedPreferences.getString("user_name", "Unknown") ?: "Unknown"
         val account_name = findViewById<TextView>(R.id.account_name)
-        account_name.text = "$namek"
+        account_name.text = namek
 
-        val changeProfile : LinearLayout = findViewById(R.id.change_profile)
+        val changeProfile = findViewById<LinearLayout>(R.id.change_profile)
         changeProfile.setOnClickListener {
-            val intent = Intent(this,EditProfileActivity::class.java)
+            val intent = Intent(this, EditProfileActivity::class.java)
             startActivity(intent)
         }
 
-        val changePass : LinearLayout = findViewById(R.id.change_pass)
+        val changePass = findViewById<LinearLayout>(R.id.change_pass)
         changePass.setOnClickListener {
             val intent = Intent(this, ChangePasswordActivity::class.java)
             startActivity(intent)
         }
 
-        //  navbar
-        val home: ImageView = findViewById(R.id.create_session_frame)
+        // Navbar
+        val home = findViewById<ImageView>(R.id.create_session_frame)
         home.setOnClickListener {
             val intent = Intent(this, UserFrontpage::class.java)
             startActivity(intent)
         }
 
-        val profile: ImageView = findViewById(R.id.user_profile_frame)
+        val profile = findViewById<ImageView>(R.id.user_profile_frame)
         profile.setOnClickListener {
             val intent = Intent(this, UserProfileActivity::class.java)
             startActivity(intent)

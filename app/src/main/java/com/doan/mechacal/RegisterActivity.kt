@@ -1,5 +1,6 @@
 package com.doan.mechacal
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
@@ -16,6 +17,7 @@ import com.doan.mechacal.api.TokenManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import androidx.core.content.edit
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -31,38 +33,35 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register_page)
 
-        // Ánh xạ view
-        nameEditText       = findViewById(R.id.account_name)
-        emailEditText      = findViewById(R.id.username)
-        passwordEditText   = findViewById(R.id.password)
+        // Initialize views
+        nameEditText = findViewById(R.id.account_name)
+        emailEditText = findViewById(R.id.username)
+        passwordEditText = findViewById(R.id.password)
         rePasswordEditText = findViewById(R.id.re_password)
-        signUpButton       = findViewById(R.id.sign_up)
-        signInLink         = findViewById(R.id.signin_link)
-        progressBar        = findViewById(R.id.progress_bar)
+        signUpButton = findViewById(R.id.sign_up)
+        signInLink = findViewById(R.id.signin_link)
+        progressBar = findViewById(R.id.progress_bar)
 
         signUpButton.setOnClickListener {
-            val name       = nameEditText.text.toString().trim()
-            val email      = emailEditText.text.toString().trim()
-            val password   = passwordEditText.text.toString().trim()
+            val name = nameEditText.text.toString().trim()
+            val email = emailEditText.text.toString().trim()
+            val password = passwordEditText.text.toString().trim()
             val rePassword = rePasswordEditText.text.toString().trim()
 
-            // Kiểm tra nhập liệu
+            // Validate input
             when {
-                email.isEmpty() || password.isEmpty() || rePassword.isEmpty() -> {
-                    Toast.makeText(this, "Điền đầy đủ thông tin!", Toast.LENGTH_SHORT).show()
+                email.isEmpty() || password.isEmpty() || rePassword.isEmpty() || name.isEmpty() -> {
+                    Toast.makeText(this, "Please fill in all fields!", Toast.LENGTH_SHORT).show()
                 }
                 password != rePassword -> {
-                    Toast.makeText(this, "Mật khẩu không khớp!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Passwords do not match!", Toast.LENGTH_SHORT).show()
                 }
                 else -> {
                     registerUser(name, email, password)
                 }
             }
+        }
 
-        }
-        val intent = Intent(this, UserProfileActivity::class.java).apply {
-            putExtra("name", nameEditText.text)
-        }
         signInLink.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
@@ -81,30 +80,35 @@ class RegisterActivity : AppCompatActivity() {
 
                 if (response.isSuccessful) {
                     val body = response.body()
-                    val accessToken  = body?.accessToken
+                    val accessToken = body?.accessToken
                     val refreshToken = body?.refreshToken
 
                     if (accessToken != null && refreshToken != null) {
-                        // Lưu token ngay sau khi đăng ký
+                        // Save tokens
                         TokenManager.saveTokens(this@RegisterActivity, accessToken, refreshToken)
-                        Toast.makeText(this@RegisterActivity, "Đăng ký thành công! Chuyển đến trang chính.", Toast.LENGTH_SHORT).show()
 
+                        // Save name to SharedPreferences
+                        val sharedPreferences = getSharedPreferences("UserPrefs", Context.MODE_PRIVATE)
+                        sharedPreferences.edit() { putString("user_name", name) }
+
+                        Toast.makeText(this@RegisterActivity, "Registration successful!", Toast.LENGTH_SHORT).show()
+
+                        // Navigate to UserFrontpage (or desired activity)
                         startActivity(Intent(this@RegisterActivity, UserFrontpage::class.java))
                         finish()
                     } else {
-                        // Nếu API chỉ trả message, không trả token
-                        Toast.makeText(this@RegisterActivity, "Đăng ký thành công! Vui lòng đăng nhập lại.", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@RegisterActivity, "Registration successful! Please log in.", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this@RegisterActivity, MainActivity::class.java))
                         finish()
                     }
                 } else {
-                    Toast.makeText(this@RegisterActivity, "Đăng ký thất bại: ${response.code()}", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@RegisterActivity, "Registration failed: ${response.code()}", Toast.LENGTH_SHORT).show()
                 }
             }
 
             override fun onFailure(call: Call<AuthResponse>, t: Throwable) {
                 progressBar.visibility = ProgressBar.GONE
-                Toast.makeText(this@RegisterActivity, "Lỗi kết nối: ${t.localizedMessage}", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@RegisterActivity, "Connection error: ${t.localizedMessage}", Toast.LENGTH_SHORT).show()
             }
         })
     }

@@ -74,7 +74,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:hint="Nhập giá trị"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -108,7 +108,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:hint="Nhập giá trị"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -142,7 +142,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:hint="Nhập giá trị"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -174,7 +174,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:hint="Nhập giá trị"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -207,7 +207,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
                 android:hint="Nhập giá trị"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
                 android:textSize="16sp"
                 android:textStyle="bold" />

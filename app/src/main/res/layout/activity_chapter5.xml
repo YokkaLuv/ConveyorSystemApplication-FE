@@ -48,122 +48,110 @@
         android:background="@drawable/bg_button"
         android:orientation="vertical">
 
-        <!-- Chain Force -->
+        <!-- Lực vòng trên tải xích -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="20dp"
-            android:text="Chain Force"
+            android:text="Lực vòng trên tải xích (N)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
-
-            <TextView
+            <EditText
+                android:id="@+id/FValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="N"
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Chain Velocity -->
+        <!-- Vận tốc xích tải -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Chain Velocity"
+            android:text="Vận tốc xích tải"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/vValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="m/s"
-                android:textSize="18sp"
-                android:textStyle="bold" />
         </LinearLayout>
 
-        <!-- Efficiency -->
+        <!-- Thời gian phục vụ -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:text="Lifetime"
+            android:text="Thời gian phục vụ (năm)"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="6dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginRight="20dp"
             android:layout_marginBottom="6dp"
             android:background="@drawable/grey_container"
             android:orientation="horizontal">
 
-            <TextView
+            <EditText
+                android:id="@+id/LValue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:text=""
+                android:hint="Nhập giá trị"
+                android:inputType="numberDecimal"
                 android:textColor="#449D00"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <!-- Load Factor -->
         <!-- const button set-->
         <include
-            android:id="@+id/chap5_button_set"
+            android:id="@+id/chap4_button_set"
             layout="@layout/component_button_set"
             android:layout_marginVertical="20dp"
             android:layout_width="match_parent"

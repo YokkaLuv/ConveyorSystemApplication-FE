@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class Chapter4resultActivity : AppCompatActivity() {
@@ -20,5 +21,14 @@ class Chapter4resultActivity : AppCompatActivity() {
             val intent = Intent(this, CreateSessionActivity::class.java)
             startActivity(intent)
         }
+
+        val Tn = intent.getDoubleExtra("Tn", 0.0);
+        val dmin = intent.getDoubleExtra("dmin", 0.0);
+
+        val result_Tn = findViewById<TextView>(R.id.result_Tn);
+        val result_dmin = findViewById<TextView>(R.id.result_dmin);
+
+        result_Tn.text = "$Tn"
+        result_dmin.text = "$dmin"
     }
 }
